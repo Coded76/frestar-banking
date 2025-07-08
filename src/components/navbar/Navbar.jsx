@@ -22,7 +22,7 @@ const Navbar = () => {
   const navItems = [
     { name: "Online Banking", href: "/" },
     { name: "Company", href: "/company" },
-    { name: "Help Center", href: "/help" },
+    { name: "Help Center", href: "/help-center" },
   ];
 
   // Determine active item based on current path

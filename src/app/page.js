@@ -1,3 +1,5 @@
+import Footer from "@/components/footer/Footer";
+import CTA from "@/components/help-center/CTA";
 import BankingFeatures from "@/components/main/BankingFeatures";
 import BankingMission from "@/components/main/BankingMission";
 import HeroSection from "@/components/main/HeroSection";
@@ -14,6 +16,8 @@ export default function Home() {
       <BankingFeatures />
       <BankingMission />
       <SupportSection />
+      <CTA /> 
+      <Footer />
     </div>
   );
 }
