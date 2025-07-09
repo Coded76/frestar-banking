@@ -14,7 +14,7 @@ const cardVariants = {
   }),
 };
 
-export default function HelpCenter() {
+export default function GetSupport() {
   return (
     <motion.section
       className="relative bg-[#F9FAFB] pt-[100px]"
@@ -47,32 +47,25 @@ export default function HelpCenter() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            We’re always available to answer your questions
+            Let’s hear from you
           </motion.h2>
         </div>
       </div>
 
       {/* Cards */}
-      <div className="max-w-7xl relative mx-auto -mt-16 grid gap-6 grid-cols-1 md:grid-cols-2 px-4">
+      <div className="max-w-4xl relative mx-auto -mt-16 px-4">
         {[
           {
             icon: <HelpCircle className="w-6 h-6" />,
             title: "Get support",
-            desc: "Need assistance? We’re here to help. Share your concerns, and we’ll get started on a solution.",
-            href: "/get-support",
-            linkText: "Submit an Issue",
-          },
-          {
-            icon: <MessageSquare className="w-6 h-6" />,
-            title: "Chat with us",
-            desc: "Having trouble? Let’s chat about it. Our team is ready to help you resolve the issue.",
-            href: "/chat",
+            desc: "Write a detailed description of the issue and attach a screenshot if necessary for easy reference. Send to any of the related email;",
+            href: "/support",
             linkText: "Chat with us",
           },
         ].map((card, i) => (
           <motion.div
             key={i}
-            className="bg-white rounded-xl shadow-lg p-6 flex -translate-y-10 flex-col"
+            className="bg-white rounded-xl shadow-lg p-10 flex -translate-y-10 flex-col"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -82,16 +75,32 @@ export default function HelpCenter() {
             <div className="inline-flex items-center justify-center w-[89px] h-[89px] bg-blue-600 text-blue-100 rounded-full mb-4">
               {card.icon}
             </div>
-            <h3 className="text-[32px] font-[700] mb-2">{card.title}</h3>
-            <p className="text-gray-600 text-[16px] font-[400] flex-1">
+            <h3 className="text-[32px] font-[700] mb-4">{card.title}</h3>
+            <p className="text-gray-600 text-[16px] border-t border-[#D9D9D9] pt-4 font-[400] flex-1">
               {card.desc}
             </p>
-            <Link
-              href={card.href}
-              className="mt-4 inline-flex items-center text-blue-600 hover:underline"
-            >
-              {card.linkText}&nbsp;&rarr;
-            </Link>
+
+            <div className="mt-6 grid md:grid-cols-2 grid-cols-1 py-6 gap-6">
+              <div className="md:border-r md:border-[#D9D9D9] ">
+                <h1 className="text-[24px] font-[700]">Technical issue</h1>
+                <p>itsupport@frestar.com</p>
+              </div>
+              <div className="md:pl-4">
+                <h1 className="text-[24px] font-[700]">Customer Support</h1>
+                <p>support@frestar.com</p>
+              </div>
+            </div>
+
+            <div className="bg-[#F3F7FE] p-10 w-full flex flex-col justify-center items-center">
+              <h1 className="md:text-[32px] text-[24px] font-[700]">Need a quick Support</h1>
+
+              <Link
+                href={card.href}
+                className="mt-4 inline-flex items-center text-blue-600 hover:underline"
+              >
+                {card.linkText}&nbsp;&rarr;
+              </Link>
+            </div>
           </motion.div>
         ))}
       </div>
