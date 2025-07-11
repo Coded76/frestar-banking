@@ -16,7 +16,7 @@ export default function CTA() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       />
-      <div className="max-w-7xl mx-auto py-8 relative z-10">
+      <div className="max-w-7xl mx-auto py-8 md:px-0 px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6 pt-6">
@@ -70,7 +70,7 @@ export default function CTA() {
         </div>
       </div>
       <div className="flex justify-center lg:justify-end">
-        <div className="absolute bottom-0 right-0">
+        <div className="md:absolute relative bottom-0 right-0">
           <img src="/phone.png" className="ab" alt="" />
         </div>
       </div>

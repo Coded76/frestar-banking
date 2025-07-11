@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Image from "next/image"
-import { MessageCircle } from "lucide-react"
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { MessageCircle } from "lucide-react";
 
 const SupportSection = () => {
   const containerVariants = {
@@ -14,7 +14,7 @@ const SupportSection = () => {
         delayChildren: 0.2,
       },
     },
-  }
+  };
 
   const leftVariants = {
     hidden: { opacity: 0, x: -50 },
@@ -26,7 +26,7 @@ const SupportSection = () => {
         ease: "easeOut",
       },
     },
-  }
+  };
 
   const rightVariants = {
     hidden: { opacity: 0, x: 50 },
@@ -38,7 +38,7 @@ const SupportSection = () => {
         ease: "easeOut",
       },
     },
-  }
+  };
 
   const imageVariants = {
     hidden: { opacity: 0, scale: 0.8 },
@@ -50,7 +50,7 @@ const SupportSection = () => {
         ease: "easeOut",
       },
     },
-  }
+  };
 
   return (
     <section className="py-16 px-4 bg-gray-50">
@@ -59,7 +59,7 @@ const SupportSection = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="flex justify-between mb-12"
+          className="flex md:flex-row flex-col justify-between gap-4 mb-12"
         >
           {/* Left Content */}
           <motion.div variants={leftVariants} className="space-y-6">
@@ -71,7 +71,9 @@ const SupportSection = () => {
           {/* Right Content */}
           <motion.div variants={rightVariants} className="space-y-6 lg:pt-8">
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-              Our support team is available to provide <br className="md:block hidden" /> assistance and ensure a smooth experience.
+              Our support team is available to provide{" "}
+              <br className="md:block hidden" /> assistance and ensure a smooth
+              experience.
             </p>
 
             <motion.button
@@ -93,7 +95,11 @@ const SupportSection = () => {
           animate="visible"
           className="relative rounded-2xl overflow-hidden shadow-2xl group"
         >
-          <motion.div whileHover={{ scale: 1.02 }} transition={{ duration: 0.6, ease: "easeOut" }} className="relative">
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="relative"
+          >
             <Image
               src="/support/support-img.png"
               alt="Friendly customer support representative"
@@ -106,14 +112,10 @@ const SupportSection = () => {
             {/* Subtle overlay for better text readability if needed */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </motion.div>
-
-
-
-
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default SupportSection
+export default SupportSection;
