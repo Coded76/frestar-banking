@@ -89,30 +89,30 @@ const SupportSection = () => {
         </motion.div>
 
         {/* Support Representative Image */}
-        <motion.div
-          variants={imageVariants}
-          initial="hidden"
-          animate="visible"
-          className="relative rounded-2xl overflow-hidden shadow-2xl group"
-        >
-          <motion.div
-            whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="relative"
-          >
-            <Image
-              src="/support/support-img.png"
-              alt="Friendly customer support representative"
-              width={1200}
-              height={600}
-              className="w-full h-[545px] object-cover"
-              priority
-            />
+    <motion.div
+  variants={imageVariants}
+  initial="hidden"
+  animate="visible"
+  className="relative rounded-2xl overflow-hidden shadow-2xl group"
+>
+  <motion.div
+    whileHover={{ scale: 1.02 }}
+    transition={{ duration: 0.6, ease: "easeOut" }}
+    className="relative w-full h-[full]" // Set dimensions here
+  >
+    <Image
+      src="/support/support-img.png"
+      alt="Friendly customer support representative"
+      width={1200}
+      height={600}
+      className="w-full h-full object-cover" // Changed to object-cover and full dimensions
+      priority
+    />
 
-            {/* Subtle overlay for better text readability if needed */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          </motion.div>
-        </motion.div>
+    {/* Subtle overlay for better text readability if needed */}
+    <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+  </motion.div>
+</motion.div>
       </div>
     </section>
   );
