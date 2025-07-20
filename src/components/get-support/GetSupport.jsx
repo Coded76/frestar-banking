@@ -31,7 +31,7 @@ export default function GetSupport() {
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-blue-600/80" />
+        <div className="absolute inset-0 bg-[#0357EE94]" />
         <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
           <motion.span
             className="inline-block bg-black/60 text-white text-sm uppercase py-1 px-3 rounded-full mb-4"

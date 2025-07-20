@@ -99,7 +99,7 @@ const Support = () => {
               alt="Friendly customer support representative"
               width={1200}
               height={600}
-              className="w-full h-[545px] object-cover"
+              className="w-full h-full object-cover"
               priority
             />
 
