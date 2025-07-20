@@ -19,7 +19,7 @@ export default function BankingFeatures() {
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
       {/* Header */}
-      <div className="text-center flex justify-between w-full items-center mb-12">
+      <div className="text-center flex md:flex-row flex-col gap-4 justify-between w-full items-center mb-12">
         <h2 className="text-3xl md:text-[48px] font-semibold">
           A Bank Built <span className="text-[#2B2BFF]">Around You</span>
         </h2>
